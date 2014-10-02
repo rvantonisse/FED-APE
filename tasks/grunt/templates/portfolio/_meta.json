@@ -1,0 +1,18 @@
+{
+	"portfolio": {
+		"slug"          : "$_PORTFOLIO_ITEM_NAME_$",
+		"title"         : "Title for $_PORTFOLIO_ITEM_NAME_$",
+		"keywords"      : "",
+		"date"          : "$_PORTFOLIO_ITEM_DATE_$",
+		"author"        : "de Voorhoede",
+		"isSticky"      : false,
+		"isCase"   		: false,
+		"imageAltText"	: "Onderdelen die samen de tekst koppen opmaken",
+		"language"		: "nl",
+		"excerpt" : {
+			"text"      : "lorem Ipsum",
+			"image"     : "path to image in item's media directory"
+		}
+
+	}
+}

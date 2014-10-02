@@ -1,0 +1,14 @@
+{
+	"components": [
+		"pattern-link",
+		"site-footer",
+		"site-header"
+	],
+	"views": [
+		"_pattern-detail",
+		"_single-documentation",
+		"documentation",
+		"home",
+		"pattern"
+	]
+}

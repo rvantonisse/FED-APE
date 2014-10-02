@@ -1,0 +1,34 @@
+@import '../variables';
+@import '../helpers';
+
+.excerpt {
+	@media only screen and (max-width: 840px) {
+		.item.even {
+			.item-text {
+				padding-right: 0;
+			}
+		}
+		.item.odd {
+			.item-text {
+				padding-left: 0;
+			}
+		}
+
+		.item-text {
+			padding-top: 1em;
+			text-align: center;
+
+			h3 {
+				text-align: center;
+			}
+
+		}
+	}
+
+}
+@media only screen and (min-width: 840px) {
+	//make the portfolio case item's header smaller for the ribbon
+	.case .odd .item-text h3 {
+		width: 80%;
+	}
+}

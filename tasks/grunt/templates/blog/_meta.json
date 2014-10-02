@@ -1,0 +1,15 @@
+{
+	"blog": {
+		"slug"          : "$_BLOG_ITEM_NAME_$",
+		"title"         : "Title for $_BLOG_ITEM_NAME_$",
+		"keywords"      : "",
+		"date"          : "$_BLOG_ITEM_DATE_$",
+		"author"        : "de Voorhoede",
+		"language"		: "nl",
+		"excerpt" : {
+			"text"      	: "lorem Ipsum",
+			"image"     	: "path to image in item's media directory",
+			"imageAltText"	: "alt text for image"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project
+	name="Jshint"
+	default="lint"
+	basedir="../../source"
+	>
+
+	<target name="lint">
+		<exec
+			executable="grunt"
+			checkreturn="true"
+			passthru="true"
+			logoutput="true"
+			>
+			<arg line="jshint:dev"/>
+		</exec>
+	</target>
+
+</project>

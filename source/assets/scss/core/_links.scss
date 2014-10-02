@@ -1,0 +1,25 @@
+@import "../variables";
+
+a {
+	color: $inline-link;
+	cursor: pointer;
+	background: transparent;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: $inline-link-hover;
+	}
+
+	p {
+		color: $black;
+	}
+}
+
+.link-proxy {
+	color: $inline-link;
+}
+
+.link-wrapper {
+	text-align: center;
+}

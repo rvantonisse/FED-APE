@@ -1,0 +1,5 @@
+@mixin box-shadow($value) {
+	-webkit-box-shadow: $value; // iOS <= 4.3, Android <= 3.0
+//	   -moz-box-shadow: $value; // FF <= 3.5? no longer needed
+	        box-shadow: $value;
+}

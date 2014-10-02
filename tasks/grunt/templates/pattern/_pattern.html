@@ -1,0 +1,134 @@
+{% extends "modules/views/_pattern-detail/_pattern-detail.html" %}
+<!-- $_PATTERN_NAME_$ -->
+
+{% block patternIntroduction %}
+<h2>$_PATTERN_NAME_$</h2>
+<p>
+    {{ content.description }}
+</p>
+<p>
+    Contents here inside a paragraph. Contained <a href="#">links</a> are direct tab-able,
+    when this main content received focus by an available skip link. Introduction to the
+    website. Tell what it is for.
+</p>
+{% endblock %}
+
+{% block patternPreview %}
+<!-- DEMO HERE -->
+<div class="$_CSS_CLASS_$" data-component="$_PATTERN_NAME_$">
+    Write HTML for `$_PATTERN_NAME_$` pattern.
+</div>
+<!-- /DEMO HERE -->
+{% endblock %}
+
+{% block patternCode %}
+<h4>HTML</h4>
+<div class="code-block">
+    <pre class="language-markup"><code class="language-markup">&lt;!-- DEMO HERE -->
+        &lt;p>
+        Demo /  preview, live or link to new window if necessary.
+        &lt;/p>
+        &lt;!-- /DEMO HERE --></code></pre>
+</div>
+
+<h4>CSS</h4>
+<div class="code-block">
+    <pre class="language-css">
+        <code class="language-css">
+            html {
+            /*Positioning*/
+            z-index: 100;
+            float: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            /*Box-model*/
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100px;
+            height: 100px;
+
+            /*Typography*/
+            font: normal 13px "Helvetica Neue", sans-serif;
+            line-height: 1.5em;
+            letter-spacing: 1pt;
+            text-align: center;
+
+            /*Visual*/
+            color: #333;
+            background-color: #f5f5f5;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+
+            /*Miscelenious*/
+            opacity: 1;
+            }
+        </code>
+    </pre>
+</div>
+
+<h4>JS</h4>
+<div class="code-block">
+    <pre class="language-javascript">
+        <code class="language-javascript">
+            var doStuff = function (param) {
+            //Do stuff!
+            param = param + 1;
+            return param;
+            };
+        </code>
+    </pre>
+</div>
+{% endblock %}
+
+{% block patternFedag %}
+<ul>
+    <li>1 Operable</li>
+    <li>2 Understandable</li>
+    <li>3 Robust
+        <ul>
+            <li>3.1 Web standard code
+                <ul>
+                    <li>3.1.1 Valid (X)HTML</li>
+                    <li>3.1.2 Valid CSS</li>
+                    <li>3.1.3 Valid JS</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+{% endblock %}
+
+{% block patternUserStories %}
+<ul>
+    <li>Visual disabled
+        <ul>
+            <li>Blind users can:
+                <ul>
+                    <li>1.2 Access the content with AT</li>
+                </ul>
+            </li>
+            <li>Visual impaired users can:
+                <ul>
+                    <li>1.3 Use a custom style sheet</li>
+                    <li>1.4 Override font-size</li>
+                    <li>1.5 Use zooming appropriately</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Physical disabled</li>
+</ul>
+{% endblock %}
+
+
+<!-- place the scripts in a /scripts folder of this item and use regular html script tags to load below (relative to scripts/) -->
+{% block scripts %}
+{{ super() }}
+{% endblock %}
+
+<!-- /$_PATTERN_NAME_$ -->

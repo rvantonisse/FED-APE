@@ -1,0 +1,12 @@
+{
+	"pattern": {
+		"slug"          : "content-slider",
+        "theme"         : "Time-based",
+		"title"         : "Content slider",
+		"keywords"      : "Pattern, content slider",
+        "description"   : "A slideshow of small pieces content grouped together like images, title and/or links.",
+		"date"          : "2014-07-16",
+		"author"        : "Roel Antonisse",
+		"language"		: "en-GB"
+	}
+}

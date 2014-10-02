@@ -1,0 +1,5 @@
+@mixin user-select($properties) {
+	-webkit-user-select: $properties;  /* Chrome all / Safari all */
+	-moz-user-select: $properties;     /* Firefox all */
+	-ms-user-select: $properties;      /* IE 10+ */
+}

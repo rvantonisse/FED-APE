@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- NB: sourcemaps need at least sass 3.3 (currently alpha) -->
+<project
+	name="Sass"
+	default="watch"
+	basedir="../../source/assets"
+	>
+
+	<target name="watch">
+		<exec command="sass -v" />
+		<mkdir dir="style"/>
+		<exec
+			executable="sass"
+			checkreturn="true"
+			passthru="true"
+			logoutput="true"
+			>
+			<arg line="--watch scss:style"/>
+			<arg line="--style expanded"/>
+			<arg line="--cache-location scss/.cache"/>
+		</exec>
+	</target>
+
+</project>

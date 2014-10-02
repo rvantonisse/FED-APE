@@ -1,0 +1,21 @@
+{% extends "modules/views/_base-view/base-view.html" %}
+{% from "modules/components/pattern-link/_pattern-link.html" import patternLink %}
+
+{% block content %}
+<div class="content-block">
+    <h1>Patterns</h1>
+    <p>
+        Contents here inside a paragraph. Contained <a href="#">links</a> are direct tab-able,
+        when this main content received focus by an available skip link. Introduction to the
+        website. Tell what it is for.
+    </p>
+</div>
+
+<div>
+    <ul>
+        {% for item in content.pattern %}
+        <li>{{ patternLink(item.theme, item.slug, item.description) }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

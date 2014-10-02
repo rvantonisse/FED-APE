@@ -1,0 +1,13 @@
+.iframe-wrapper {
+	padding: 1em;
+
+	iframe {
+		height: 500px;
+		max-width: 800px;
+		overflow: hidden;
+		width: 100%;
+		@media only screen and (max-width: 810px) {
+			height: 300px;
+		}
+	}
+}

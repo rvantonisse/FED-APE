@@ -1,0 +1,15 @@
+{
+	"documentation": {
+		"slug"          : "front-end-development-accessibility-guidelines",
+		"title"         : "Title for front-end-development-accessibility-guidelines",
+		"keywords"      : "Documentation, front-end-development-accessibility-guidelines",
+		"date"          : "2014-07-16",
+		"author"        : "de Voorhoede",
+		"language"		: "en-GB",
+		"excerpt" : {
+			"text"      	: "This is a front-end-development-accessibility-guidelines documentation.",
+			"image"     	: "path to image in item's media directory",
+			"imageAltText"	: "Front-end development accessibility guidelines"
+		}
+	}
+}

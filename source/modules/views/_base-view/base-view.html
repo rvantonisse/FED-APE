@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ content.language | default('en-GB') }}">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport for cross device use -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ie only -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>{% block title %}Fed APE | {{ content.title | default("Front-end development Accessibility Pattern Encyclopedia") }}{% endblock %}</title>
+
+    <meta name="author" content="Site creator or page Author's name">
+    <meta name="description" content="Site description when index.html or page description otherwise">
+    <meta name="keywords" content="a, list, of, keyword, here">
+
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="{{ pathToAssets }}style/main.css">
+    <!--/Style sheets-->
+
+</head>
+<body>
+{% block header %}
+{% include "modules/components/site-header/_site-header.html" %}
+{% endblock %}
+
+<main class="site-main" id="page-main-content" tabindex="-1">
+    {% block content %}{% endblock %}
+</main>
+
+{% block footer %}
+{% include "modules/components/site-footer/_site-footer.html" %}
+{% endblock %}
+
+<!--Scripts-->
+<script src="{{ pathToAssets }}scripts/vendor.js"></script>
+<script src="{{ pathToAssets }}scripts/main.js"></script>
+{% block scripts %}
+{% endblock %}
+<!--/Scripts-->
+</body>
+</html>

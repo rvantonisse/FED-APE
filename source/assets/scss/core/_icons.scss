@@ -1,0 +1,69 @@
+@import '../variables';
+
+@font-face {
+	font-family: 'voorhoede-icon-font';
+	src: url('#{$path-fonts}voorhoede-icon-font.eot');
+	src: url('#{$path-fonts}voorhoede-icon-font.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}voorhoede-icon-font.woff') format('woff'),
+	url('#{$path-fonts}voorhoede-icon-font.ttf') format('truetype'),
+	url('#{$path-fonts}voorhoede-icon-font.svg#dvh-logo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'dvh-logo';
+	src: url('#{$path-fonts}dvh-logo/dvh-logo.eot');
+	src: url('#{$path-fonts}dvh-logo/dvh-logo.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}dvh-logo/dvh-logo.woff') format('woff'),
+	url('#{$path-fonts}dvh-logo/dvh-logo.ttf') format('truetype'),
+	url('#{$path-fonts}dvh-logo/dvh-logo.svg#dvh-logo') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.voorhoede-icon:before,
+.voorhoede-icon:after{
+	font-family: 'voorhoede-icon-font';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before {
+	content: $icon-arrow-left;
+}
+.icon-arrow-down:before {
+	content: $icon-arrow-down;
+}
+.icon-arrow-up:before {
+	content: $icon-arrow-up;
+}
+.icon-arrow-right:before {
+	content: $icon-arrow-right;
+}
+.icon-export:before {
+	content: $icon-export;
+}
+.icon-link:before {
+	content: $icon-link;
+}
+.icon-twitter:before {
+	content: $icon-twitter;
+}
+.icon-facebook:before {
+	content: $icon-facebook;
+}
+.icon-googleplus:before {
+	content: $icon-googleplus;
+}
+.icon-linkedin:before {
+	content: $icon-linkedin;
+}

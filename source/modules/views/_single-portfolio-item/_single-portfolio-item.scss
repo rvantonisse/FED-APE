@@ -1,0 +1,82 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/helpers";
+
+.cases-header {
+	@include centered-columns(10);
+	@include small();
+	margin: 0 auto;
+
+	img {
+		vertical-align: top;
+	}
+}
+
+.cases-section {
+	@include clearfix();
+	padding: 0 0 2em 0;
+	text-align: left;
+
+	h2 {
+		font-size: 1.55em;
+		margin-bottom: 1.29em;
+		line-height: 1.3em;
+		position: relative;
+		text-align: center;
+	}
+
+	span.ruler {
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background-color: $shadow;
+		top: 13px;
+		left: 0;
+	}
+
+	span.ruler-text {
+		position: relative;
+		background-color: #ffffff;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+	@media only screen and (max-width: 840px) {
+		// cases page remove ruler next to h3
+		span.ruler {
+			display: none;
+		}
+		.cases-section {
+			h3 {
+				text-align: center;
+				margin-bottom: 0;
+			}
+			h4 {
+				text-align: center;
+			}
+		}
+		span.ruler-text {
+			position: relative;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	h3 {
+		font-size: 1.2em;
+		margin-bottom: 0.833em;
+		text-align: center;
+	}
+
+	li {
+		font-size: 1.0em;
+	}
+
+	.cases-tagline {
+		color: $dvh-blue;
+		font-family: 'pt-sans-bold', sans-serif;
+		font-weight: normal;
+		font-size: 1.2em;
+		margin: 0;
+		padding: 20px 0;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<project
+	name="ServerRoot"
+	default="deploy"
+	basedir="../.."
+	>
+
+	<target name="development">
+		<exec
+			executable="ln"
+			checkreturn="true"
+			passthru="true"
+			logoutput="true"
+			>
+			<arg line="-sfn"/>
+			<arg line="source web"/>
+		</exec>
+	</target>
+
+	<target name="distribution">
+		<exec
+			executable="ln"
+			checkreturn="true"
+			passthru="true"
+			logoutput="true"
+			>
+			<arg line="-sfn"/>
+			<arg line="distribution web"/>
+		</exec>
+	</target>
+
+	<target name="deploy" depends="distribution">
+		<exec
+			executable="grunt"
+			checkreturn="true"
+			passthru="true"
+			logoutput="true"
+			>
+			<arg line="deploy"/>
+		</exec>
+	</target>
+
+</project>

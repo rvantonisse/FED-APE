@@ -1,0 +1,47 @@
+.ribbon {
+	@include rotate(45deg);
+	width: 118px;
+	color: #fff;
+	position: absolute;
+	top: 33px;
+	right: -48px;
+	border-bottom: 46px solid #113137;
+	border-left: 46px solid transparent;
+	border-right: 46px solid transparent;
+	span {
+		display: inline-block;
+		font-family: $header-font-family;
+		font-size: 26px;
+		position: absolute;
+		top: 2px;
+		left: 24px;
+		text-align: center;
+		text-transform: uppercase;
+
+		@media only screen and (max-width: 600px) {
+			font-size: 16px;
+			top: 1px;
+			left: 9px;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		border-bottom: 25px solid #113137;
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+		top: 15px;
+		right: -27px;
+		width: 56px;
+	}
+}
+
+.lt-ie9 .ribbon {
+	position: relative;
+	float: right;
+	border: 0;
+	background: #113137;
+	height: 45px;
+	width: 110px;
+	top: -35px;
+	right: -43px;
+}

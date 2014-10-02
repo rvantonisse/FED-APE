@@ -1,0 +1,15 @@
+{% extends "modules/views/_single-documentation/_single-documentation.html" %}
+<!-- $_DOCUMENTATION_NAME_$ -->
+
+{% block patternPreview %}
+<div class="front-end-development-accessibility-guidelines" data-component="front-end-development-accessibility-guidelines">
+	Write HTML for `$_DOCUMENTATION_NAME_$` pattern.
+</div>
+{% endblock %}
+
+<!-- place the scripts in a /scripts folder of this item and use regular html script tags to load below (relative to scripts/) -->
+{% block scripts %}
+{{ super() }}
+{% endblock %}
+
+<!-- /$_DOCUMENTATION_NAME_$ -->

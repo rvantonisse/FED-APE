@@ -1,0 +1,60 @@
+{% extends "modules/views/_base-view/base-view.html" %}
+
+{% block content %}
+<h1>Pattern detail</h1>
+
+<div class="content-block">
+    {% block patternIntroduction %}
+    <h2>Pattern name</h2>
+    <p>
+        Contents here inside a paragraph. Contained <a href="#">links</a> are direct tab-able,
+        when this main content received focus by an available skip link. Introduction to the
+        website. Tell what it is for.
+    </p>
+    {% endblock %}
+    <div class="content-block-toc">
+        <h3>Table of contents</h3>
+        <ol>
+            <li><a href="#preview">Demo / preview</a></li>
+            <li><a href="#code">Code blocks</a></li>
+            <li><a href="#test-guides">Test guides</a>
+                <ol>
+                    <li><a href="#test-guide-fedag">Fedag</a></li>
+                    <li><a href="#test-guide-user-stories">User stories</a></li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <h3 id="preview" tabindex="-1">Demo / preview</h3>
+    <div class="pattern-preview-box">
+        {% block patternPreview %}{% endblock %}
+    </div>
+
+    <h3 id="code" tabindex="-1">Code</h3>
+    <p>
+        Code is highlighted with prism.js.
+    </p>
+    {% block patternCode %}
+    {% endblock %}
+
+    <h3 id="test-guides" tabindex="-1">Test guides</h3>
+    <p>
+        Guides to see what WCAG proper FED code is used and how disabled users are able to use this code.
+    </p>
+
+    <h4 id="test-guides-fedag" tabindex="-1">Fedag</h4>
+    <p>
+        This is the Front-end developer accessibility guide specific to this pattern. Translated WCAG for FED. Example:
+    </p>
+    {% block patternFedag %}
+    {% endblock %}
+
+    <h4 id="test-guides-user-stories" tabindex="-1">User stories</h4>
+    <p>
+        A list or table of disabled user specific stories that are covered for this pattern. Example:
+    </p>
+    {% block patternUserStories %}
+    {% endblock %}
+</div>
+{% endblock %}

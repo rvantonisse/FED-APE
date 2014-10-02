@@ -1,0 +1,12 @@
+{
+	"pattern": {
+		"slug"          : "$_PATTERN_NAME_$",
+        "theme"         : "General",
+		"title"         : "Title for $_PATTERN_NAME_$",
+		"keywords"      : "Pattern, $_PATTERN_NAME_$",
+        "description"   : "One-sentence description of $_PATTERN_NAME_$.",
+		"date"          : "$_PATTERN_DATE_$",
+		"author"        : "de Voorhoede",
+		"language"		: "en-GB"
+	}
+}

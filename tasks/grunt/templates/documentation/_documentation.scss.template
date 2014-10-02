@@ -1,0 +1,8 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/helpers";
+
+/* $_DOCUMENTATION_NAME_$ documentation */
+
+.$_CSS_CLASS_$ {
+
+}

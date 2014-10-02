@@ -1,0 +1,103 @@
+//
+// Global variables
+//
+// This file doesn't output any CSS rules, so you can import it as often as needed without sending
+// duplicate styles to the browser.
+//
+
+
+// Paths
+// ------------------
+
+$path-fonts: 			'../fonts/';
+$path-images: 			'../images/';
+
+// Fonts
+// ------------------
+
+// font sizes
+
+$body-font-size: 16px;
+$body-line-height: 1.5em;
+$footer-font-size: .8em;
+
+// font-families
+
+$body-font: 'Geneva';
+$body-font-alt: Tahoma, Verdana, sans-serif;
+$body-font-family: $body-font, $body-font-alt;
+
+$header-font: 'Arial Black';
+$header-font-alt: 'Arial Bold', Gadget, sans-serif;
+$header-font-family: $header-font, $header-font-alt;
+
+// Sizes
+// ------------------
+$content-width: 940px;
+
+// Colors
+// ------------------
+
+$dvh-red: 				#e65e3e;
+$dvh-green: 			#58b2bd;
+$dvh-blue: 				#00373d;
+$dvh-yellow: 			#e6c73e;
+
+// link colors
+
+$inline-link: 			#d57a4b;
+$inline-link-hover:     #c26738;
+
+$button-internal:		#ebdd3f;
+$button-internal-hover:	#f5e749;
+$button-inline:         #e65e3e;
+$button-inline-hover:   #eb6c4e;
+$button-external:       #00373d;
+$button-external-hover: #0f4c53;
+
+
+
+// shadow color
+
+$shadow: 				#ccc;
+
+// text colors
+
+$black:					#000;
+$grey:					#798386;
+
+
+// Alpha transparancy for background planes
+// ------------------
+
+$plane-light: 			0.2;
+$plane-medium: 			0.4;
+$plane-dark: 			1;
+
+// Grid
+// ------------------
+$number-of-columns: 	12;
+$page-width: 			960px;
+//$column-margin: 12px;
+//$column-width: ($page-width - ($column-margin * ($number-of-columns -1 ))) / $number-of-columns;
+//$column-total-width: $column-width + $column-margin;
+
+
+/* Calculations */
+$column-width: ($page-width / $number-of-columns);
+$gutter-width: ($page-width - $number-of-columns * $column-width) / $number-of-columns;
+$column-pct: ($column-width / $page-width) * 100;
+$gutter-pct: ($gutter-width / $page-width) * 100;
+
+/* icon ids */
+
+$icon-arrow-left: "\e602";
+$icon-arrow-down: "\e603";
+$icon-arrow-up: "\e604";
+$icon-arrow-right: "\e605";
+$icon-export: "\e600";
+$icon-link: "\e601";
+$icon-twitter: "\e606";
+$icon-facebook: "\e607";
+$icon-googleplus: "\e608";
+$icon-linkedin: "\e609";

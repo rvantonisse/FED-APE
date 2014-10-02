@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport for cross device use -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ie only -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Fed Ape Pattern detail</title>
+
+    <!--Meta data-->
+    <meta name="author" content="Site creator or page Author's name" />
+    <meta name="description" content="Site description when index.html or page description otherwise" />
+    <meta name="keywords" content="a, list, of, keyword, here" />
+    <!--/Meta data-->
+
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/prism.css" />
+    <!--/Style sheets-->
+
+</head>
+<body>
+    <!--Header-->
+    <header class="site-header">
+        <div class="site-header-title">
+            <h1>Fed&nbsp;Ape</h1>
+            <p>Front-end development<br>
+            Accessibility Pattern Encyclopedia</p>
+            <img class="site-header-title-image" src="image/logo.png" alt="" />
+        </div>
+
+        <!-- Skip menu -->
+        <div class="site-header-skip-menu">
+            <a href="#page-main-content">Go to the page's main content</a>
+        </div>
+        <!-- /Skip menu -->
+
+        <!--Navigation-->
+        <nav class="site-navigation">
+            <h2 class="site-navigation-title">Site navigation</h2>
+            <ul>
+                <li><a href="#checklists">Checklists</a></li>
+                <li><a href="pattern-index.html">Patterns</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+        <!--/Navigation-->
+
+        <!-- Breadcrump -->
+        <ol class="breadcrump">
+            <li class="breadcrump-directory"><a href="index.html" rel="index">home</a></li>
+            <li class="breadcrump-directory"><a href="pattern-index.html" rel="up">patterns</a></li>
+            <li class="breadcrump-directory breadcrump-directory-current">pattern-detail</li>
+        </ol>
+        <!-- /Breadcrump -->
+
+    </header>
+    <!--/Header-->
+
+    <!--Main content-->
+    <main class="site-main" id="page-main-content" tabindex="-1">
+        <h2>Pattern detail</h2>
+        <div class="content-block-toc">
+            <h3>Table of contents</h3>
+            <ol>
+                <li>Pattern name
+                    <ol>
+                        <li>Demo / preview</li>
+                        <li>Code blocks
+                            <ol>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>Test guides
+                    <ol>
+                        <li>Fedag</li>
+                        <li>User stories</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <div class="content-block">
+            <h3>Pattern name</h3>
+            <p>
+                Contents here inside a paragraph. Contained <a href="#">links</a> are direct tab-able,
+                 when this main content received focus by an available skip link. Introduction to the
+                website. Tell what it is for.
+            </p>
+            <h4>Demo / preview</h4>
+            <div class="preview-box">
+                <!-- DEMO HERE -->
+                <p>Demo /  preview, live or link to new window if necessary.</p>
+                <!-- /DEMO HERE -->
+            </div>
+            <h4>Code</h4>
+            <p>
+                Code is highlighted with prism.js.
+            </p>
+            <h5>HTML</h5>
+            <div class="code-block">
+                <pre class="language-markup"><code class="language-markup">&lt;!-- DEMO HERE -->
+&lt;p>
+    Demo /  preview, live or link to new window if necessary.
+&lt;/p>
+&lt;!-- /DEMO HERE --></code></pre>
+            </div>
+
+            <h5>CSS</h5>
+            <div class="code-block">
+                <pre class="language-css">
+                    <code class="language-css">
+html {
+/*Positioning*/
+    z-index: 100;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+/*Box-model*/
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+
+/*Typography*/
+    font: normal 13px "Helvetica Neue", sans-serif;
+    line-height: 1.5em;
+    letter-spacing: 1pt;
+    text-align: center;
+
+/*Visual*/
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+
+/*Miscelenious*/
+    opacity: 1;
+}
+                    </code>
+                </pre>
+            </div>
+
+            <h5>JS</h5>
+            <div class="code-block">
+                <pre class="language-javascript">
+                    <code class="language-javascript">
+var doStuff = function (param) {
+    //Do stuff!
+    param = param + 1;
+    return param;
+};
+                    </code>
+                </pre>
+            </div>
+            <h4>Test guides</h4>
+            <p>
+                Guides to see what WCAG proper FED code is used and how disabled users are able to use this code.
+            </p>
+
+            <h5>Fedag</h5>
+            <p>
+                This is the Front-end developer accessibility guide specific to this pattern. Translated WCAG for FED. Example:
+            </p>
+            <ul>
+                <li>1 Operable</li>
+                <li>2 Understandable</li>
+                <li>3 Robust
+                    <ul>
+                        <li>3.1 Web standard code
+                            <ul>
+                                <li>3.1.1 Valid (X)HTML</li>
+                                <li>3.1.2 Valid CSS</li>
+                                <li>3.1.3 Valid JS</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </li>
+            </ul>
+
+            <h5>User stories</h5>
+            <p>
+                A list or table of disabled user specific stories that are covered for this pattern. Example:
+            </p>
+            <ul>
+                <li>Visual disabled
+                    <ul>
+                        <li>Blind users can:
+                            <ul>
+                                <li>1.2 Access the content with AT</li>
+                            </ul>
+                        </li>
+                        <li>Visual impaired users can:
+                            <ul>
+                                <li>1.3 Use a custom style sheet</li>
+                                <li>1.4 Override font-size</li>
+                                <li>1.5 Use zooming appropriately</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Physical disabled</li>
+            </ul>
+        </div>
+    </main>
+    <!--/Main content-->
+
+    <!--Footer-->
+    <footer>
+        <nav class="site-footer-navigation">
+            <h2>Fed Ape</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" rel="author">Contact</a></li>
+                <li><a href="#license" rel="license">License</a></li>
+                <li><a href="#sitemap" rel="sitemap">Sitemap</a></li>
+            </ul>
+        </nav>
+        <div class="footer-copyright">
+            <p>
+                Fed&nbsp;Ape © 2014 Copyright / License Roel&nbsp;Victor&nbsp;Antonisse
+            </p>
+        </div>
+    </footer>
+    <!--/Footer-->
+
+    <!--Scripts-->
+    <script src="prismjs/prism.js"></script>
+    <!--/Scripts-->
+</body>
+</html>

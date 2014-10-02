@@ -1,0 +1,326 @@
+@import 'variables';
+@import 'helpers';
+
+@import '../../vendor/app-guide-font/app-guide-font';
+
+$guide-link-color: #ADBCC7;
+$guide-graphic-color: #708091;
+$guide-swatch-size: 80px;
+
+//
+// APP GUIDE
+//
+
+
+
+.app-guide-section {
+	padding: .5em 0;
+
+	h2 {
+		margin-bottom: 0.5em;
+
+		&.section-title {
+			margin-bottom: 0;
+		}
+	}
+
+	h3 {
+		font-size: 1.290em;
+	}
+
+	// adjust z-index to show section headers
+	.section-header {
+		z-index: 0;
+	}
+}
+
+.app-guide-content {
+
+	p {
+		font-size: 1.1em;
+		max-width: 48em;
+		line-height: 1.5em;
+		margin: 1em 0;
+		padding: 0;
+	}
+}
+
+ul {
+	margin: 0 0 1em 1em;
+}
+
+dl {
+	@include clearfix();
+	font-size: 0.882em;
+
+	dt {
+		clear: right;
+		float: left;
+		width: 30%;
+	}
+
+	dd {
+		float: right;
+		margin: 0;
+		width: 70%;
+	}
+}
+
+.style-guide,
+.front-end-guide,
+.guide-intro {
+	@include text-container();
+}
+
+.guide-intro {
+	padding: 1em 2.5em;
+	margin-bottom: 2em;
+}
+
+xmp {
+	border: 1px dashed $grey;
+	font-size: 0.882em;
+	padding: 1em;
+	white-space: initial;
+}
+
+.app-guide-header {
+	margin: 0 auto -5em auto;
+	max-width: 962px;
+	padding: 5em 0 0 0;
+	position: relative;
+	width: 90%;
+
+	h1 {
+		text-align: center;
+		margin-bottom: 1em;
+	}
+}
+
+.app-guide-section-title {
+	position: relative;
+    font-size: 1.55em;
+}
+
+.app-guide-back {
+	position: absolute;
+	top: 1.2em;
+	margin-left: -1.5em;
+	text-decoration: none;
+}
+
+.app-guide-icon {
+	color: $guide-link-color;
+	text-decoration: none;
+}
+
+.app-guide-permalink {
+	position: absolute;
+	top: 0.5em;
+	left: -1.6em;
+	font-size: .7em;
+	text-decoration: none;
+	&:before {
+		content: '\e602';
+	}
+}
+
+.app-guide-icon-tags {
+	font-size: 0.8em;
+	margin-left: 2px;
+}
+
+.app-guide-example {
+	padding: 1.5em 10px;
+}
+
+.app-guide-preview {
+	position: relative;
+	@include clearfix();
+}
+
+.app-guide-preview-top,
+.app-guide-preview-bottom {
+	position: relative;
+}
+.app-guide-preview-top {
+	margin-top: 2em;
+}
+.app-guide-preview-bottom {
+	margin-bottom: 2em;
+}
+.app-guide-crop-mark {
+	position: relative;
+	&:before,
+	&:after {
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 1em;
+		height: 1em;
+		border-color: $guide-graphic-color;
+		border-style: solid;
+	}
+	&:before {
+		left: -1em;
+	}
+	&:after {
+		right: -1em;
+	}
+}
+.app-guide-preview-top .app-guide-crop-mark {
+	&:before,
+	&:after {
+		top: -1em;
+	}
+	&:before {
+		border-width: 0 2px 2px 0;
+	}
+	&:after {
+		border-width: 0 0 2px 2px;
+	}
+}
+.app-guide-preview-bottom .app-guide-crop-mark {
+	&:before {
+		border-width: 2px 2px 0 0;
+	}
+	&:after {
+		border-width: 2px 0 0 2px;
+	}
+}
+
+.app-guide-code {
+	position: relative;
+}
+
+.app-guide-code-options {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+	background: $guide-graphic-color;
+	li {
+		display: inline-block;
+	}
+	a {
+		color: white;
+		padding: 2px 3px;
+	}
+}
+
+.app-guide-footer {
+	margin: 1em 0;
+	text-align: center;
+}
+
+.app-guide-example-box {
+	float: none;
+	margin: 0 0 2em 0;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	overflow: hidden;
+	text-align: center;
+
+	li {
+		float: left;
+		width: 120px;
+		margin: 0 16px 0 16px;
+		box-sizing: border-box;
+	}
+}
+
+.app-guide-example-icon {
+	display: block;
+	font-size: 2em;
+	line-height: 0.47;
+	padding: 22px 0;
+}
+
+.app-guide-example-icon-large {
+	font-size: 4em;
+	line-height: .82;
+}
+
+.app-guide-swatch {
+	display: block;
+	box-sizing: border-box;
+	width:  $guide-swatch-size;
+	height: $guide-swatch-size;
+	border-width: 14px;
+	border-style: solid;
+	border-color: #e3e3e3;
+	margin: 0 auto;
+}
+
+.app-guide-swatches li{
+	min-height: 200px;
+}
+[title="dvh-blue"] .app-guide-swatch {
+	background-color: $dvh-blue;
+}
+
+[title="dvh-yellow"] .app-guide-swatch {
+	background-color: $dvh-yellow;
+}
+
+[title="dvh-red"] .app-guide-swatch {
+	background-color: $dvh-red;
+}
+
+[title="dvh-green"] .app-guide-swatch {
+	background-color: $dvh-green;
+}
+
+[title="button-internal"] .app-guide-swatch {
+	background-color: $button-internal;
+}
+
+[title="button-internal-hover"] .app-guide-swatch {
+	background-color: $button-internal-hover;
+}
+
+[title="button-inline"] .app-guide-swatch {
+	background-color: $button-inline;
+}
+
+[title="button-inline-hover"] .app-guide-swatch {
+	background-color: $button-inline-hover;
+}
+[title="button-external"] .app-guide-swatch {
+	background-color: $button-external;
+}
+
+[title="button-external-hover"] .app-guide-swatch {
+	background-color: $button-external-hover;
+}
+
+[title="inline-link"] .app-guide-swatch {
+	background-color: $inline-link;
+}
+
+[title="inline-link-hover"] .app-guide-swatch {
+	background-color: $inline-link-hover;
+}
+
+[title="shadow"] .app-guide-swatch {
+	background-color: $shadow;
+}
+
+[title="black"] .app-guide-swatch {
+	background-color: $black;
+}
+
+[title="grey"] .app-guide-swatch {
+	background-color: $grey;
+}
+
+.app-guide-info {
+	display: block;
+	text-align: center;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	font-size: 0.9em;
+}

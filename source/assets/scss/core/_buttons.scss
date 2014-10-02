@@ -1,0 +1,70 @@
+@import '../variables';
+@import '../helpers';
+
+
+.button-external,
+.button-inline,
+.button-internal {
+	display: inline-block;
+	line-height: 1;
+	min-width: 185px;
+	padding: 20px 25px 18px 25px;
+	text-align: center;
+
+	@media only screen and (max-width: 350px) {
+		min-width: 140px;
+		padding: 10px 15px 10px 15px;
+	}
+}
+
+.button-internal {
+	background-color: $button-internal;
+	color: $button-external;
+	border: none;
+
+	&:hover,
+	&:focus {
+		background-color: $button-internal-hover;
+		color: $button-external;
+	}
+	&.icon-right:after {
+		content: $icon-arrow-right;
+		vertical-align: middle;
+	}
+
+}
+
+.button-inline {
+	background-color: $button-inline;
+	color: white;
+
+	&:hover,
+	&:focus {
+		background-color: $button-inline-hover;
+		color: white;
+	}
+	&.icon-down:after {
+		content: $icon-arrow-down;
+		vertical-align: middle;
+	}
+}
+
+.button-external {
+	background-color: $button-external;
+	color: white;
+
+	&:hover,
+	&:focus {
+		background-color: $button-external-hover;
+		color: white;
+	}
+
+	&:after {
+		content: $icon-export;
+		margin-left: 10px;
+	}
+}
+
+.button-wrapper {
+	text-align: center;
+}

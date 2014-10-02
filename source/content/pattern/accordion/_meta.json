@@ -1,0 +1,12 @@
+{
+	"pattern": {
+		"slug"          : "accordion",
+        "theme"         : "Expandable content",
+		"title"         : "Title for accordion",
+		"keywords"      : "Pattern, accordion",
+        "description"   : "Content is expanded below a heading or other descriptive text.",
+		"date"          : "2014-07-16",
+		"author"        : "Roel Antonisse",
+		"language"		: "en-GB"
+	}
+}

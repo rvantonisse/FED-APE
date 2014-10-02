@@ -1,0 +1,29 @@
+//
+// Modules
+//
+// This file is automatically populated. Do not edit manually.
+//
+
+//
+// Components
+//
+// Use `grunt create-component:component-name` to add a component.
+// Use `grunt remove-component:component-name` to delete a component.
+//
+
+@import '../../modules/components/pattern-link/pattern-link';
+@import '../../modules/components/site-footer/site-footer';
+@import '../../modules/components/site-header/site-header';
+
+//
+// Views
+//
+// Use `grunt create-view:view-name` to add a view.
+// Use `grunt remove-view:view-name` to delete a view.
+//
+
+@import '../../modules/views/_pattern-detail/_pattern-detail';
+@import '../../modules/views/_single-documentation/_single-documentation';
+@import '../../modules/views/documentation/documentation';
+@import '../../modules/views/home/home';
+@import '../../modules/views/pattern/pattern';

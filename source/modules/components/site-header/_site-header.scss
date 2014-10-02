@@ -1,0 +1,42 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/helpers";
+
+/* site-header component */
+
+.site-header {
+}
+.site-header-title {
+  position: relative;
+}
+.site-header-title h1 {
+  padding-top: 0;
+}
+.site-header-title-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 100%;
+  height: 2em;
+}
+.site-header-skip-menu {
+  /*        display: none;
+  */    }
+
+/*site-navigation*/
+.site-navigation {
+}
+
+.site-navigation-title {
+  display: none;
+}
+
+.site-navigation ul {
+}
+
+.site-navigation li {
+  padding: 15px 0;
+  display: inline-block;
+  list-style-type: none;
+}

@@ -1,0 +1,30 @@
+@import '../variables';
+@import '../helpers';
+
+img {
+	max-width: 100%;
+	border: none;
+}
+
+.centered-image {
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+	figcaption {
+		text-align: center;
+	}
+}
+
+.image-first {
+	padding-bottom: 1.5em;
+}
+
+.image-between {
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+}
+
+.image-last {
+	padding-top: 1.5em;
+}

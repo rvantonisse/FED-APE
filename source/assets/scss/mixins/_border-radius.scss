@@ -1,0 +1,6 @@
+@mixin border-radius($properties) {
+	-webkit-border-radius: $properties;
+	-moz-border-radius: $properties;
+	-o-border-radius: $properties;
+	border-radius: $properties;
+}

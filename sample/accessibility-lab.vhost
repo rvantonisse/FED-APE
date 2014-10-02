@@ -1,0 +1,14 @@
+<VirtualHost *:8888>
+	ServerName local.accessibility-lab.voorhoede.nl
+	DocumentRoot "/Volumes/Voorhoede/WebSites/accessibility-lab/web"
+</VirtualHost>
+
+<VirtualHost *:8888>
+	ServerName distribution.accessibility-lab.voorhoede.nl
+	DocumentRoot "/Volumes/Voorhoede/WebSites/accessibility-lab/distribution"
+</VirtualHost>
+
+<VirtualHost *:8888>
+	ServerName guide.accessibility-lab.voorhoede.nl
+	DocumentRoot "/Volumes/Voorhoede/WebSites/accessibility-lab/guide"
+</VirtualHost>

@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<!--
+Jenkins Phing build file.
+Runs preprocessors, lints and tests on assets and deploys on success.
+-->
+<!--suppress PhingDomInspection -->
+<project
+		name="Jenkins"
+		default="deploy"
+		basedir="./"
+		>
+
+	<property file="build.properties"/>
+	<property file="build.user.properties"/>
+	<property
+			name="build.npm"
+			value="build.npm.txt"
+			/>
+
+	<target name="npm">
+		<echo message="running npm install"/>
+		<exec
+				executable="npm"
+				checkreturn="true"
+				passthru="true"
+				logoutput="true"
+				>
+			<arg line="install"/>
+		</exec>
+	</target>
+
+	<!--
+	####################################################################
+	CI tool targets
+	####################################################################
+	-->
+
+	<!--
+	CSSLint ############################################################
+	-->
+
+	<target name="csslint">
+		<mkdir dir="${test.report}"/>
+		<echo message="Running CSSLint"/>
+		<exec
+				executable="grunt"
+				checkreturn="false"
+				passthru="true"
+				logoutput="true"
+				>
+			<arg line="csslint"/>
+		</exec>
+	</target>
+
+	<!--
+	dupfind ############################################################
+	-->
+
+	<target name="dupfind">
+		<mkdir dir="${test.report}"/>
+		<echo message="Running dupfind"/>
+		<exec
+				executable="java"
+				checkreturn="false"
+				passthru="true"
+				logoutput="true"
+				>
+			<arg line="-Xmx512m"/>
+			<arg line="-jar"/>
+			<arg line="tasks/java/dupfind.jar"/>
+			<arg line="> ${test.report}/dupfind.xml"/>
+		</exec>
+	</target>
+
+	<!--
+	JSHint #############################################################
+	-->
+
+	<target name="jshint">
+		<mkdir dir="${test.report}"/>
+		<echo message="Running JSHint"/>
+		<exec
+				executable="grunt"
+				checkreturn="false"
+				passthru="true"
+				logoutput="true"
+				>
+			<arg line="jshint:ci"/>
+		</exec>
+	</target>
+
+	<!--
+	SCSS ###############################################################
+	-->
+
+	<target name="-scss-each">
+		<echo message="Sass: ${scss.basename}.scss"/>
+		<delete>
+			<fileset dir="${scss.source}">
+				<include name="${scss.basename}.css"/>
+			</fileset>
+		</delete>
+		<exec
+				executable="sass"
+				checkreturn="true"
+				passthru="true"
+				logoutput="true"
+				>
+			<arg line="${scss.source}/${scss.basename}.scss"/>
+			<arg line="${scss.target}/${scss.basename}.css"/>
+			<arg line="--style expanded"/>
+			<arg line="--cache-location ${style.source}/.cache"/>
+		</exec>
+	</target>
+
+	<target name="scss">
+		<echo message="Compiling SCSS:"/>
+		<mkdir dir="${scss.target}"/>
+		<foreach
+				param="scss.basename"
+				target="-scss-each"
+				>
+			<fileset dir="${scss.source}">
+				<include name="*.scss"/>
+				<exclude name="_*.scss"/>
+			</fileset>
+			<mapper type="glob" from="*.scss" to="*"/>
+		</foreach>
+	</target>
+
+	<!--
+	####################################################################
+	CI tool runner:
+	Runs all tools listed in the `ci.toolchain` property.
+	####################################################################
+	-->
+
+	<target name="-ci-tools-each">
+		<echo message="calling target ${ci.tool}"/>
+		<phingcall target="${ci.tool}"/>
+	</target>
+
+	<target
+			name="ci-toolchain"
+			>
+		<if>
+			<equals arg1="${deploy.dtap}" arg2="acceptance"/>
+			<then>
+				<phingcall target="scss"/>
+			</then>
+			<else>
+				<foreach
+						list="${ci.toolchain}"
+						param="ci.tool"
+						target="-ci-tools-each"
+						/>
+			</else>
+		</if>
+	</target>
+
+	<!--
+	####################################################################
+	Deploy:
+	Synchronizes all resources listed in the `deploy.scope` property.
+	####################################################################
+	-->
+
+	<target name="purge-assets">
+		<delete>
+			<fileset dir="${style.target}">
+				<include name="*.css"/>
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="-sync">
+		<exec
+				executable="rsync"
+				checkreturn="true"
+				passthru="true"
+				logoutput="true"
+				>
+			<arg line="-arv"/>
+			<arg line="--delete"/>
+			<arg line="${resource}"/>
+			<arg line="${deploy.path}/${deploy.dtap}"/>
+		</exec>
+	</target>
+
+	<target name="vcs-tag">
+		<reflexive>
+			<fileset dir="source/modules/views/_base-view">
+				<include name="base-view.html"/>
+			</fileset>
+			<filterchain>
+				<replaceregexp>
+					<regexp
+							pattern="&lt;!--\s+VCS[^&gt;]+--&gt;"
+							replace="&lt;!--${line.separator} VCS${line.separator} Branch: ${deploy.branch}${line.separator} Commit: ${deploy.commit}${line.separator}--&gt;"
+							/>
+				</replaceregexp>
+			</filterchain>
+		</reflexive>
+	</target>
+
+	<target
+			name="deploy"
+			depends="npm, ci-toolchain, vcs-tag"
+			>
+		<if>
+			<equals arg1="${deploy.dtap}" arg2="development"/>
+			<then>
+				<exec
+						executable="grunt"
+						checkreturn="true"
+						passthru="true"
+						logoutput="true"
+						>
+					<arg line="developServer:no-watch"/>
+				</exec>
+				<foreach
+					list="${deploy.devscope}"
+					param="resource"
+					target="-sync"
+					/>
+			</then>
+			<else>
+				<exec
+						executable="grunt"
+						checkreturn="true"
+						passthru="true"
+						logoutput="true"
+						>
+					<arg line="deploy"/>
+				</exec>
+				<foreach
+					list="${deploy.scope}"
+					param="resource"
+					target="-sync"
+					/>
+			</else>
+		</if>
+	</target>
+
+</project>

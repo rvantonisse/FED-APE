@@ -1,0 +1,17 @@
+@mixin border-color-left-rgba($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	border-left-color: lighten( $color, 30% );
+	border-left-color: $rgba;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str}, endColorstr=#{$ie-hex-str});
+	zoom: 1;
+}
+
+@mixin border-color-right-rgba($color, $alpha) {
+	$rgba: rgba($color, $alpha);
+	$ie-hex-str: ie-hex-str($rgba);
+	border-right-color: lighten( $color, 30% );
+	border-right-color: $rgba;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str}, endColorstr=#{$ie-hex-str});
+	zoom: 1;
+}

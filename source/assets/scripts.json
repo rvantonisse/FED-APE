@@ -1,0 +1,24 @@
+{
+	"vendor": [
+		"prismjs/prism"
+	],
+	"common": [
+		"helpers/excerpts",
+		"google-analytics"
+	],
+	"components": [
+		"site-background",
+		"site-header"
+	],
+	"views": [
+        "blog"
+	],
+	"portfolio": [
+		"thuis-bij-de-groot",
+		"making-of-voorhoede-nl"
+	],
+	"blog": [
+		"scripts/hoe-leg-ik-moeder-front-end-uit"
+	]
+
+}

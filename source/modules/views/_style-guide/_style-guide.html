@@ -1,0 +1,367 @@
+{% extends "modules/views/_guide/guide.html" %}
+{% import  "modules/views/_guide/guide.html" as guide %}
+
+{% set backgrounds = ['highlightBackground','alternateBackground',''] %}
+
+{% block content %}
+
+<div class="style-guide">
+<h1>Voorhoede - Style Guide</h1>
+<!--
+	LOGO:
+-->
+<section id="section-logo" class="app-guide-section">
+	<h2 class="app-guide-section-title">
+		Logo {{ guide.linkSection('logo') }}
+	</h2>
+	<div class="app-guide-section-content">
+		<img src="{{ pathToAssets }}images/logo.svg"
+		     onerror="this.src='{{ pathToAssets }}images/logo.min.png'"
+		     alt="De Voorhoede"
+		     height="150"
+		     width="150"/>
+	</div>
+	<p>Note: Logo is vector format (SVG) for modern browsers and has bitmap (PNG) fallback for older browsers.</p>
+</section>
+<!--
+	COLORS:
+-->
+<section id="section-colors" class="app-guide-section">
+	<h2 class="app-guide-section-title">
+		Colors {{ guide.linkSection('colors') }}
+	</h2>
+	<div class="app-guide-section-content">
+		<h3>Base colors</h3>
+		<ul class="app-guide-example-box app-guide-swatches">
+
+			<li title="dvh-blue">
+				<span class="app-guide-info">#00373d</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$dvh-blue</span>
+			</li>
+			<li title="dvh-yellow">
+				<span class="app-guide-info">#e6c73e</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$dvh-yellow</span>
+			</li>
+			<li title="dvh-red">
+				<span class="app-guide-info">#e65e3e</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$dvh-red</span>
+			</li>
+			<li title="dvh-green">
+				<span class="app-guide-info">#58b2bd</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$dvh-green</span>
+			</li>
+		</ul>
+		<h3>Text colors</h3>
+		<ul class="app-guide-example-box app-guide-swatches">
+			<li title="black">
+				<span class="app-guide-info">#000</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$black</span>
+			</li>
+			<li title="grey">
+				<span class="app-guide-info">#798386</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$grey</span>
+			</li>
+		</ul>
+		<h3>Link and Button colors</h3>
+		<ul class="app-guide-example-box app-guide-swatches">
+			<li title="button-internal">
+				<span class="app-guide-info">#ebdd3f</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$button-internal</span>
+			</li>
+			<li title="button-internal-hover">
+				<span class="app-guide-info">#f5e749</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$button-internal-hover</span>
+			</li>
+			<li title="button-inline">
+				<span class="app-guide-info">#e65e3e</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$button-inline</span>
+			</li>
+			<li title="button-inline-hover">
+				<span class="app-guide-info">#eb6c4e</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$button-inline-hover</span>
+			</li>
+			<li title="button-external">
+				<span class="app-guide-info">#00373d</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$button-external</span>
+			</li>
+			<li title="button-external-hover">
+				<span class="app-guide-info">#0f4c53</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$button-external-hover</span>
+			</li>
+			<li title="inline-link">
+				<span class="app-guide-info">#d57a4b</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$inline-link</span>
+			</li>
+			<li title="inline-link-hover">
+				<span class="app-guide-info">#c26738</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$inline-link-hover</span>
+			</li>
+		</ul>
+		<h3>Shadow color</h3>
+		<ul class="app-guide-example-box">
+			<li title="shadow">
+				<span class="app-guide-info">#ccc</span>
+				<span class="app-guide-swatch"></span>
+				<span class="app-guide-info">$shadow</span>
+			</li>
+		</ul>
+	</div>
+	<p>Note: Each color swatch has a hexadecimal color code (for designers) on top and an scss variable name (for developers) below.</p>
+</section>
+<!--
+	ICONS:
+-->
+<section id="section-icons" class="app-guide-section">
+	<h2 class="app-guide-section-title">
+		Icons {{ guide.linkSection('icons') }}
+	</h2>
+	<div class="app-guide-section-content">
+		<ul class="app-guide-example-box app-guide-swatches">
+			<li>
+				<span class="app-guide-info">icon-arrow-left</span>
+				<span class="app-guide-example-icon icon-arrow-left"></span>
+				<span class="app-guide-glyph app-guide-info">\e602</span>
+			</li>
+			<li>
+				<span class="app-guide-info">icon-arrow-right</span>
+				<span class="app-guide-example-icon icon-arrow-right"></span>
+				<span class="app-guide-glyph app-guide-info">\e605</span>
+			</li>
+			<li>
+				<span class="app-guide-info">icon-arrow-up</span>
+				<span class="app-guide-example-icon icon-arrow-up"></span>
+				<span class="app-guide-glyph app-guide-info">\e604</span>
+			</li>
+			<li>
+				<span class="app-guide-info">icon-arrow-down</span>
+				<span class="app-guide-example-icon icon-arrow-down"></span>
+				<span class="app-guide-glyph app-guide-info">\e603</span>
+			</li>
+			<li>
+				<span class="app-guide-info">icon-export</span>
+				<span class="app-guide-example-icon icon-export"></span>
+				<span class="app-guide-glyph app-guide-info">\e600</span>
+			</li>
+			<li>
+				<span class="app-guide-info">icon-link</span>
+				<span class="app-guide-example-icon icon-link"></span>
+				<span class="app-guide-glyph app-guide-info">\e601</span>
+			</li>
+			<li>
+				<span class="app-guide-info">icon-twitter</span>
+				<span class="app-guide-example-icon icon-twitter"></span>
+				<span class="app-guide-glyph app-guide-info">\e606</span>
+			</li>
+			<li>
+				<span class="app-guide-info">icon-facebook</span>
+				<span class="app-guide-example-icon icon-facebook"></span>
+				<span class="app-guide-glyph app-guide-info">\e607</span>
+			</li>
+			<li>
+				<span class="app-guide-info">icon-googleplus</span>
+				<span class="app-guide-example-icon icon-googleplus"></span>
+				<span class="app-guide-glyph app-guide-info">\e608</span>
+			</li>
+			<li>
+				<span class="app-guide-info">icon-linkedin</span>
+				<span class="app-guide-example-icon icon-linkedin"></span>
+				<span class="app-guide-glyph app-guide-info">\e609</span>
+			</li>
+		</ul>
+
+	</div>
+</section>
+<!--
+	TYPOGRAPHY:
+-->
+<section id="section-typography" class="app-guide-section">
+	<h2 class="app-guide-section-title">
+		Typography {{ guide.linkSection('typography') }}
+	</h2>
+	<div class="app-guide-section-content">
+
+		<div id="section-body-text">
+			<h3 class="app-guide-section-title">
+				Body text {{ guide.linkSection('body-text') }}
+			</h3>
+			<div class="app-guide-example">
+				<p>
+					Body text - Vim atqui constituam eu. Sale persecuti an per, cum ex omnesque signiferumque,
+					mel ex iudicabit mnesarchum.
+				</p>
+				<dl>
+					<dt>Typeface:</dt>
+					<dd>Questrial</dd>
+					<dd>$body-font</dd>
+					<dt>Alternative typefaces:</dt>
+					<dd>Arial, Calibri, Verdana, sans-serif</dd>
+					<dd>$body-font-alt</dd>
+					<dt>Font-family:</dt>
+					<dd>$body-font-family</dd>
+					<dt>Font-size:</dt>
+					<dd>17px</dd>
+					<dd>$body-font-size</dd>
+					<dt>Line height:</dt>
+					<dd>1.5</dd>
+					<dd>$body-line-height</dd>
+					<dt>Color:</dt>
+					<dd>#000</dd>
+					<dd>$black</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div id="section-headings">
+			<h3 class="app-guide-section-title">
+				Headings {{ guide.linkSection('headings') }}
+			</h3>
+			<div class="app-guide-example">
+				<p>All headings have the following styles:</p>
+				<dl>
+					<dt>Typeface:</dt>
+					<dd>PT Sans bold</dd>
+					<dd>$header-font</dd>
+					<dt>Alternative typeface:</dt>
+					<dd>sans-serif</dd>
+					<dd>$header-font-alt</dd>
+					<dt>Font-family:</dt>
+					<dd>$header-font-family</dd>
+					<dt>Color:</dt>
+					<dd>#00373d</dd>
+					<dd>$dvh-blue</dd>
+				</dl>
+
+				<h1>Heading Level 1</h1>
+				<dl>
+					<dt>Font-size:</dt>
+					<dd>1.765em</dd>
+				</dl>
+
+				<h2>Heading Level 2</h2>
+				<dl>
+					<dt>Font-size:</dt>
+					<dd>1.5em</dd>
+				</dl>
+
+				<h3>Heading Level 3</h3>
+				<dl>
+					<dt>Font-size:</dt>
+					<dd>1.353em</dd>
+					<dt>Lineheight:</dt>
+					<dd>1.3</dd>
+				</dl>
+
+				<h4>Heading Level 4</h4>
+				<dl>
+					<dt>Font-size:</dt>
+					<dd>1.059em</dd>
+				</dl>
+
+				<header class="section-header js-section-header" data-content="section">
+					<h2 class="section-title" data-content="section">section</h2>
+				</header>
+				<xmp>
+					<header class="section-header js-section-header" data-content="section">
+						<h2 class="section-title" data-content="section">section</h2>
+					</header>
+				</xmp>
+				<p>
+					Note: Use the data attribute <code>data-content</code> on both the header and h2
+					element, to set the content of the ::before and ::after pseudo elements.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!--
+	BUTTONS AND LINKS:
+-->
+<section id="section-buttons-and-links" class="app-guide-section">
+	<h2 class="app-guide-section-title">
+		Buttons and Links {{ guide.linkSection('buttons-and-links') }}
+	</h2>
+	<div class="app-guide-section-content">
+
+		<div id="section-inline-link">
+			<h3 class="app-guide-section-title">
+				Inline Link {{ guide.linkSection('inline-link') }}
+			</h3>
+			<div class="app-guide-example">
+				<a href="#">
+					$body-font-family - color: $inline-link / font-size: 1em / line-height: 1.5
+				</a>
+			</div>
+		</div>
+
+		<div id="section-inline-button">
+			<h3 class="app-guide-section-title">
+				Button inline link{{ guide.linkSection('inline-button') }}
+			</h3>
+			<div class="app-guide-example ">
+				<a class="button-inline voorhoede-icon icon-down" href="#">
+					Show code
+				</a>
+				<xmp>
+					<a class="button-inline voorhoede-icon icon-down" href="#">Show code</a>
+				</xmp>
+			</div>
+
+			<div class="app-guide-example ">
+				<a class="button-inline voorhoede-icon icon-down small" href="#">
+					Show code
+				</a>
+				<xmp>
+					<a class="button-inline voorhoede-icon icon-down small" href="#">Show code</a>
+				</xmp>
+			</div>
+
+			<p>The icon and small classes are optional</p>
+		</div>
+		<div id="section-internal-button">
+			<h3 class="app-guide-section-title">
+				Button internal link{{ guide.linkSection('internal-button') }}
+			</h3>
+			<div class="app-guide-example ">
+				<a class="button-internal voorhoede-icon icon-right" href="#">
+					Blog overview
+				</a>
+				<xmp>
+					<a class="button-internal voorhoede-icon icon-right" href="#">Blog overview</a>
+				</xmp>
+			</div>
+			<p>The icon class is optional</p>
+		</div>
+		<div id="section-external-button">
+			<h3 class="app-guide-section-title">
+				Button external link {{ guide.linkSection('button-external') }}
+			</h3>
+			<div class="app-guide-example ">
+				<a class="button-external voorhoede-icon" href="#">
+					View website
+				</a>
+				<xmp>
+					<a class="button-external voorhoede-icon" href="#">View website</a>
+				</xmp>
+			</div>
+		</div>
+
+
+	</div>
+</section>
+</div>
+
+{% endblock %}

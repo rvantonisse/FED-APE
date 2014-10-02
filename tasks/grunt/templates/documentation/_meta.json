@@ -1,0 +1,15 @@
+{
+	"documentation": {
+		"slug"          : "$_DOCUMENTATION_NAME_$",
+		"title"         : "Title for $_DOCUMENTATION_NAME_$",
+		"keywords"      : "Pattern, $_DOCUMENTATION_NAME_$",
+		"date"          : "$_DOCUMENTATION_DATE_$",
+		"author"        : "de Voorhoede",
+		"language"		: "en-GB",
+		"excerpt" : {
+			"text"      	: "This is a $_DOCUMENTATION_NAME_$ documentation.",
+			"image"     	: "path to image in item's media directory",
+			"imageAltText"	: "alt text for image"
+		}
+	}
+}

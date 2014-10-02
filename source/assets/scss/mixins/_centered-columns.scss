@@ -1,0 +1,15 @@
+/* Grid Mixins */
+
+@mixin centered-columns($columns) {
+  float: none;
+  margin: 0 auto 2em auto;
+  width: $column-pct * $columns + $gutter-pct * ($columns - 1) + unquote('%');
+}
+
+@mixin small() {
+  @media only screen and (max-width: 840px) {
+    margin-right: 0;
+//    text-align: center;
+    width: 100%;
+  }
+}

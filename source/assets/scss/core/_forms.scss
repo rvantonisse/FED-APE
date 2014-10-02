@@ -1,0 +1,15 @@
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+label[for] {
+	cursor: pointer;
+}
+
+textarea {
+	overflow: auto; // Remove default vertical scroll bar in IE 8/9
+	vertical-align: top; // Improve readability and alignment in all browsers
+}
