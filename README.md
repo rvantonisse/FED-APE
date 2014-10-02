@@ -9,8 +9,8 @@ the __voorhoede-site__ created by [De Voorhoede](http://www.voorhoede.nl).
 ### 1 Clone repository
 This project is hosted as a BitBucket.org GIT repository. Clone it:
 
-    $ git clone git@bitbucket.org:rvantonisse/accessiblity-lab.git
-	
+    $ git clone https://github.com/rvantonisse/FED-APE.git
+
 ### 2 Configure vhost
 1. Copy vhost file from `sample/accessibility-lab.vhost` to your vhost directory.
 2. Add to your `/etc/hosts` index file:
