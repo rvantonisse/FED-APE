@@ -1,5 +1,7 @@
+    Author: Roel Antonisse
+    Last saved: 02/10/2014
+
 # Accessibility Lab; Front-end development Accessible Pattern Encyclopedia
-_Roel Antonisse May 2014_
 
 The Accessibility Lab or front-end development accessible pattern encyclopedia, is a front-end developer tool to be consulted for accessible front-end practices. What practices will be 
 demonstrated is the result of the research done on accessible front-end practices by me (Roel Antonisse). This project is an edited clone of 
@@ -55,10 +57,10 @@ This project uses the common Voorhoede architecture with [Nunjucks](http://jlong
 			components/
 				component-name/     <-- re-usable block (html,js,css,readme,tests)
 			views/
-				view-name/          <-- unique view using components				
+				view-name/          <-- unique view using components
 		vendor/                     <-- 3rd party libraries
 			nunjucks/               <-- templating library used for this project
-	
+    
 	tasks/
 		grunt/
 		    configuration/
@@ -67,7 +69,7 @@ This project uses the common Voorhoede architecture with [Nunjucks](http://jlong
 		    utilities/
 		java/
 		phing/
-		
+	
 	web/                            <-- auto generated via `grunt develop` task
 	
 ### Grunt tasks
@@ -100,6 +102,7 @@ This project uses the common Voorhoede architecture with [Nunjucks](http://jlong
     // Front-end guide; Compiles project as component viewer and styleguide to guide folder
     $ grunt create-guide
     
+
 ## Todos
 1. Clean-up grunt tasks
     1. Refine pattern related tasks
@@ -124,11 +127,11 @@ This project uses the common Voorhoede architecture with [Nunjucks](http://jlong
         1. Alert
         2. Cookie notification
     5. Other...
-    
+
 ### Sample folder
 In this folder you can find more information about the project. It contains:
 
-1. Project statement
-2. Project backlog (another todo)
-3. Visual look moodboard
+1. Project statement (__TODO__)
+2. Project backlog (__TODO__)
+3. Visual look moodboard (__TODO__)
 4. Web prototype containing index.html, pattern overview and pattern detail pages.
