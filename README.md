@@ -3,9 +3,14 @@
 
 # Accessibility Lab; Front-end development Accessible Pattern Encyclopedia
 
-The Accessibility Lab or front-end development accessible pattern encyclopedia, is a front-end developer tool to be consulted for accessible front-end practices. What practices will be 
-demonstrated is the result of the research done on accessible front-end practices by me (Roel Antonisse). This project is an edited clone of 
-the __voorhoede-site__ created by [De Voorhoede](http://www.voorhoede.nl).
+The Accessibility Lab or front-end development accessible pattern encyclopedia, is a front-end developer tool to be consulted for accessible front-end practices. What practices will be demonstrated is the result of the research done on accessible front-end practices by me (Roel Antonisse). This project is an edited clone of the __voorhoede-site__ created by [De Voorhoede](http://www.voorhoede.nl).
+This project is inspired by / based on [A11yproject](http://a11yproject.com/), [WebAIM](http://webaim.org/) and the [W3C-WAI](http://www.w3.org/WAI/).
+
+## Table of Contents
+
+1. [Getting started](#geting-started)
+2. [Architecture](#architecture)
+3. [Todos](#todos)
 
 ## Getting started
 ### 1 Clone repository
